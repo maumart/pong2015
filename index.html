@@ -1,42 +1,29 @@
-<!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>        
-        <div id="playarea">
-            <div class="paddle" id="paddleLeft"> </div>
-            <div class="paddle" id="paddleRight"> </div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="bower_components/chai/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+        var expect = chai.expect;
+        var should = chai.should();
+    </script>
 
-            <div class="borders borders--horizontal" id="borderRight"></div>
-            <div class="borders borders--horizontal" id="borderLeft"></div>
-            <div class="borders" id="borderBottom"></div>
-            <div class="borders" id="borderTop"></div>           
+    <!-- bower:js -->
+    <!-- endbower -->
 
-            <div class="ball" id="ball"></div>
-            <div class="ball" id="ball2"></div>
-             <div class="ball" id="ball3"></div>
-        </div>
+    <!-- include source files here... -->
 
-        <div id="controlls">
-            <div class="controll-keys">
-                <input type="button" id="buttonUp" value="&#9650" \>
-                <input type="button" id="buttonDown" value="&#9660" \>
-            </div>
+    <!-- include spec files here... -->
+    <script src="spec/test.js"></script>
 
-            <!--<input type="range" class="rangeElement" name="rangeLeft" id="rangeLeft" min="-50" max="50"> -->
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <!-- <script src="js/plugins.js"></script> -->
-        <script src="js/main.js"></script>   
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    </body>
+    <script>mocha.run()</script>
+</body>
 </html>

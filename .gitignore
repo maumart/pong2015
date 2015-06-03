@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+node_modules
+build
+*.node
+components
+coverage
+*.orig
+.idea
+test/watch-*.txt
+gulp.1
